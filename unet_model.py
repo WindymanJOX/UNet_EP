@@ -100,10 +100,3 @@ class UNet_EP(nn.Module):
         x = self.up4(x, x1)
         logits = self.outc(x)
         return logits
-    
-
-# if __name__ == '__main__':
-#     net = UNet_EP(3, 2)
-#     data = torch.rand(1, 3, 512, 512)
-#     with torch.no_grad():
-#         _ = net(data)
